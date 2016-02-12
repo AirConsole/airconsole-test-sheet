@@ -1,0 +1,10 @@
+body {
+  font-size: 18px;
+  margin-top: 140px;
+  padding-bottom: 80px;
+}
+
+.progress_container {
+  background: #F6F6F6;
+  padding: 20px;
+}

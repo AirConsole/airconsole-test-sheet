@@ -1,0 +1,116 @@
+<div class="progress_container navbar-default navbar navbar-fixed-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Progress:</h3>
+
+        <div class="row">
+          <div class="col-md-10">
+            <div class="progress">
+              <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="{ width: getProgress() }" aria-valuemin="0" aria-valuemax="100" ng-style="{ width: getProgress() }"></div>
+            </div>
+          </div>
+          <div class="col-md-2 text-right">
+            <button class="btn btn-warning" ng-click="clearProgress()">Clear progress</button>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="drow">
+    <div class="col-md-12">
+      <h1 class="page-header"><img src="http://www.airconsole.com/file/logo-40.png"> AirConsole Checklist</h1>
+      <p>
+        On AirConsole we try to provide high quality games. Before you submit your game you
+        can use this checklist to make sure you have gone through every edge case.
+      </p>
+      <p>
+        Some topics and their solutions are covered in our best practice guide.
+        <br><br>
+        <a href="http://developers.airconsole.com/#/guides/best_practices" target="_blank" class="btn btn-primary">Read best practice guide</a>
+      </p>
+
+      <p class="alert alert-info">
+        Your progress will automatically be saved in this browser!
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="page-header">General</h2>
+      <ul>
+        <li class="checkbox" ng-repeat="q in questions.general track by $index">
+          <label>
+            <input type="checkbox" ng-checked="q.checked" ng-model="questions.general[$index].checked" ng-change="updateProgress(q)"> {{ q.text }}
+          </label>
+        </li>
+      </ul>
+
+      <p>
+        <a href="http://developers.airconsole.com/#/guclasses/simulator" target="_blank" class="btn btn-primary">How to test your game</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="page-header">Screen</h2>
+      <ul>
+        <li class="checkbox" ng-repeat="q in questions.screen">
+          <label>
+            <input type="checkbox" ng-checked="q.checked" ng-model="questions.screen[$index].checked" ng-change="updateProgress(q)"> {{ q.text }}
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="page-header">Controller</h2>
+      <ul>
+        <li class="checkbox" ng-repeat="q in questions.ctrl">
+          <label>
+            <input type="checkbox" ng-checked="q.checked" ng-model="questions.ctrl[$index].checked" ng-change="updateProgress(q)"> {{ q.text }}
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="page-header">Screen browsers</h2>
+      Make sure your game works in all modern browsers.
+      <ul>
+        <li class="checkbox" ng-repeat="q in questions.ctx_screen">
+          <label>
+            <input type="checkbox" ng-checked="q.checked" ng-model="questions.ctx_screen[$index].checked" ng-change="updateProgress(q)"> {{ q.text }}
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="page-header">Controller browsers</h2>
+      Make sure your game works in the AirConsole-App as well as in all modern mobile browsers.
+      <ul>
+        <li class="checkbox" ng-repeat="q in questions.ctx_mobile">
+          <label>
+            <input type="checkbox" ng-checked="q.checked" ng-model="questions.ctx_mobile[$index].checked" ng-change="updateProgress(q)"> {{ q.text }}
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>
