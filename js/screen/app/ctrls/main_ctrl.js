@@ -24,7 +24,7 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
         checked: false
       },
       {
-        text: "It should work on different kinds of screen resolutions (Responsive design)",
+        text: "It should work on different kinds of screen resolutions (Responsive design (TV resolution 960x540))",
         checked: false
       },
       {
@@ -58,7 +58,7 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
     ],
     ctrl: [
       {
-        text: "It should work for different screen sizes.",
+        text: "It should work for different screen sizes (Min. 320x480).",
         checked: false
       },
       {
