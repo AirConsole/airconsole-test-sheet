@@ -113,6 +113,24 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
         text: "Android AirConsole App",
         checked: false
       }
+    ],
+    launch: [
+      {
+        text: "I have prepared a text for my game's landing page",
+        checked: false
+      },
+      {
+        text: "I have prepared a 30-second trailer for my game's landing page",
+        checked: false
+      },
+      {
+        text: "If my game was made with Unity, I have created a page for it on madewith.unity.com",
+        checked: false
+      },
+      {
+        text: "I am promoting my game on social media and will keep posting about it on relevant groups and hashtags",
+        checked: false
+      }
     ]
   };
   $scope.questions = {};
