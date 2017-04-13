@@ -84,7 +84,7 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
         checked: false
       },
       {
-        text: "IE 11",
+        text: "Microsoft Edge",
         checked: false
       },
       {
