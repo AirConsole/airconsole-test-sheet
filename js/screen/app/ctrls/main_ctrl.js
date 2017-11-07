@@ -1,6 +1,8 @@
 TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', function ($scope, $location, $timeout) {
 
-  var KEY = "AIRCONSOLE_CHECKLIST";
+  var KEY_OLD = "AIRCONSOLE_CHECKLIST";
+  var KEY = "AIRCONSOLE_CHECKLIST_V1";
+  var storage_key = KEY;
   $scope.total_questions = 0;
   $scope.marked_questions = 0;
   $scope.questions_default = {
@@ -178,11 +180,11 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
   $scope.questions = {};
 
   $scope.save = function() {
-    localStorage.setItem(KEY, JSON.stringify($scope.questions));
+    localStorage.setItem(storage_key, JSON.stringify($scope.questions));
   };
 
   $scope.load = function() {
-    return JSON.parse(localStorage.getItem(KEY)) || $scope.questions_default;
+    return JSON.parse(localStorage.getItem(storage_key)) || $scope.questions_default;
   };
 
   $scope.updateProgress = function(q) {
@@ -195,6 +197,16 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
   };
 
   $scope.init = function() {
+
+    if (localStorage.getItem(KEY_OLD)) {
+      var conf = confirm("There is a newer version of this sheet. Do you want to load it? All progress will be lost!");
+      if (conf) {
+        localStorage.removeItem(KEY_OLD);
+      } else {
+        storage_key = KEY_OLD;
+      }
+    }
+
     $scope.questions = $scope.load();
 
     for (var ctx in $scope.questions) {
@@ -220,7 +232,8 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
         questions[i].checked = false;
       }
     }
-    localStorage.setItem(KEY, null);
+    localStorage.removeItem(KEY);
+    localStorage.removeItem(KEY_OLD);
     $scope.questions = $scope.load();
     $scope.marked_questions = 0;
   };
