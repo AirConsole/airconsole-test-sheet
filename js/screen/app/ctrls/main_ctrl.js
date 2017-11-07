@@ -6,117 +6,155 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
   $scope.questions_default = {
     general: [
       {
-        text: "It includes the lastest AirConsole API",
+        text: "My game includes the lastest AirConsole API",
         checked: false
       },
       {
-        text: "I have tested my game on https",
+        text: "All resources in my game are loaded over https",
         checked: false
       },
       {
-        text: "I have tested my game on a higher latency",
+        text: "I have tested my game with higher latency",
         checked: false
       }
     ],
     screen: [
       {
-        text: "It should show an explanation text",
+        text: "My game is self-explanatory or provides players with instructions on how to play",
         checked: false
       },
       {
-        text: "It should work on different kinds of screen resolutions (Responsive design (TV resolution 960x540))",
+        text: "My game works on different screen resolutions / aspect ratios (Responsive design (TV resolution 960x540))",
         checked: false
       },
       {
-        text: "It should work when only 1 player is connected / trying to play",
+        text: "My game shows how many players are missing for the game to be started (Or: there is no minimal number of players in my game)",
         checked: false
       },
       {
-        text: "It should work when more than 1 player is connected / trying to play",
+        text: "If more players are connected than are allowed in my game, spare players are informed of that on their controllers (Or: there is no maximal number of players in my game)",
         checked: false
       },
       {
-        text: "It should work when more players are connected than my game allows",
+        text: "My game remains functional when devices connect during the game",
         checked: false
       },
       {
-        text: "It should work when a player disconnects during the game",
+        text: "My game remains functional when devices disconnect during the game",
         checked: false
       },
       {
-        text: "It should work when all players disconnect",
+        text: "I did not hardcode device IDs and my game accounts for the fact that device ids may not be consecutive",
         checked: false
       },
       {
-        text: "It should NOT have any hard coded device ids",
+        text: "My game displays the players' nicknames (see 'getNickname' in the API) instead of 'Player 1' etc. (Or: no names / titles are displayed)",
         checked: false
       },
       {
-        text: "If possible, it should use the player's name instead of 'Player 1'",
+        text: "Menus (level selection, settings etc.) can only be controlled by the Master Controller",
+        checked: false
+      },
+      {
+        text: "I have read and followed the High Score Guide and the launch checklist within (Or: my game does not use high scores)",
+        checked: false
+      },
+      {
+        text: "I am using the AirConsole Keyboard for any text input in my game (Or: My game does not use any text input)",
+        checked: false
+      },
+      {
+        text: "I have added a custom loading screen (Only games made with Unity)",
         checked: false
       }
     ],
     ctrl: [
       {
-        text: "It should work for different screen sizes (Min. 320x480).",
+        text: "My game works on different phone screen sizes (Min. 320x480).",
         checked: false
       },
       {
-        text: "It should work on different devices (iPhone, Android).",
+        text: "My game controller lets the player know which character / avatar they are controlling (using colors, labels etc)",
         checked: false
       },
       {
-        text: "It should indicate which ingame-character the player is controlling.",
+        text: "My game controller shows buttons labelled with their function or a relevant icon rather than letters that need to be explained on screen",
         checked: false
       },
       {
-        text: "It should show different views (Start, Ingame-Controller, Win-Screen)",
+        text: "The layout (buttons, images, text, options...) of my game controller adapts to different ingame situations (menu, ingame, game over etc.)",
+        checked: false
+      },
+      {
+        text: "The individual buttons on my game controller are as big as possible on the phone screen",
+        checked: false
+      },
+      {
+        text: "My controller uses custom visuals that fit the art style of my game",
+        checked: false
+      },
+      {
+        text: "I am not using any html <img> tags on my controller, but set images as <div> backgrounds instead (so that no 'save image as' option appears) ",
         checked: false
       }
     ],
     ctx_screen: [
       {
-        text: "Chrome",
+        text: "I have tested my game in the Chrome browser and it works",
         checked: false
       },
       {
-        text: "Firefox",
+        text: "I have tested my game in the Firefox browser and it works",
         checked: false
       },
       {
-        text: "Microsoft Edge",
+        text: "I have tested my game in the Microsoft Edge browser and it works",
         checked: false
       },
       {
-        text: "Safari",
+        text: "I have tested my game in the Safari browser and it works",
         checked: false
       }
     ],
     ctx_mobile: [
       {
-        text: "iOS Chrome",
+        text: "I have tested my game on iOS in the Chrome browser, and it works",
         checked: false
       },
       {
-        text: "iOS Safari",
+        text: "I have tested my game on iOS in the Safari browser, and it works",
         checked: false
       },
       {
-        text: "iOS AirConsole App",
+        text: "I have tested my game on iOS in the AirConsole App, and it works",
         checked: false
       },
       {
-        text: "Android Chrome",
+        text: "I have tested my game on Android in the Chrome browser, and it works",
         checked: false
       },
       {
-        text: "Android AirConsole App",
+        text: "I have tested my game on Android in the AirConsole App, and it works",
+        checked: false
+      }
+    ],
+    ads: [
+      {
+        text: "I regularly call showAd in my game",
+        checked: false
+      },
+      {
+        text: "My game is paused in the onAdShow event and all audio is muted",
+        checked: false
+      },
+      {
+        text: "My game is resumed in the onAdComplete event and all audio is unmuted",
         checked: false
       }
     ],
     launch: [
       {
-        text: "I have prepared a text for my game's landing page",
+        text: "I have prepared a text for my game's landing page (ca. 200-500 words)",
         checked: false
       },
       {
@@ -124,11 +162,15 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
         checked: false
       },
       {
-        text: "If my game was made with Unity, I have created a page for it on madewith.unity.com",
+        text: "I have created a page for it on madewith.unity.com (Only games made with Unity)",
         checked: false
       },
       {
         text: "I am promoting my game on social media and will keep posting about it on relevant groups and hashtags",
+        checked: false
+      },
+      {
+        text: "I have created a feature graphic for my game's promotion within the AirConsole store",
         checked: false
       }
     ]

@@ -68,6 +68,9 @@
           </label>
         </li>
       </ul>
+
+      <a href="https://developers.airconsole.com/#!/guides/unity-custom-loading-screen" target="_blank" class="btn btn-primary">Guide for Custom Loading Screens</a>
+
     </div>
   </div>
 
@@ -88,7 +91,7 @@
   <div class="row">
     <div class="col-md-12">
       <h2 class="page-header">Screen browsers</h2>
-      Make sure your game works in all modern browsers.
+      Your game works in all modern browsers.
       <ul>
         <li class="checkbox" ng-repeat="q in questions.ctx_screen">
           <label>
@@ -102,7 +105,11 @@
   <div class="row">
     <div class="col-md-12">
       <h2 class="page-header">Controller browsers</h2>
-      Make sure your game works in the AirConsole-App as well as in all modern mobile browsers.
+      Your game works in the AirConsole App as well as in all modern mobile browsers.
+
+      <p class="alert alert-info">
+        If you are having trouble getting access to a specific operating system or browser, we recommend asking the AirConsole developer community on our <a href="discordapp.com/invite/5BzND3v">Discord server</a> for help.
+      </p>
       <ul>
         <li class="checkbox" ng-repeat="q in questions.ctx_mobile">
           <label>
@@ -113,10 +120,27 @@
     </div>
   </div>
 
+ <div class="row">
+    <div class="col-md-12">
+      <h2 class="page-header">Monetization</h2>
+      Your game is showing ad breaks and handles them correctly. Remember that you can call showAd as often as possible and AirConsole will limit the actual ad frequency. 
+      <p class="alert alert-info">
+        See our <a href="https://developers.airconsole.com/#!/guides/ads_dev">monetization guide</a> for more information.
+      </p>
+      <ul>
+        <li class="checkbox" ng-repeat="q in questions.ads">
+          <label>
+            <input type="checkbox" ng-checked="q.checked" ng-model="questions.ads[$index].checked" ng-change="updateProgress(q)"> {{ q.text }}
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+
   <div class="row">
     <div class="col-md-12">
-      <h2 class="page-header">Launch</h2>
-        Make sure you have taken or are taking the necessary steps to launch and promote your game
+      <h2 class="page-header">Launch & Marketing</h2>
+        You have taken or are taking the necessary steps to launch and promote your game.
       <ul>
         <li class="checkbox" ng-repeat="q in questions.launch">
           <label>
@@ -124,6 +148,7 @@
           </label>
         </li>
       </ul>
+      <a href="http://developers.airconsole.com/#/guides/feature_graphic" target="_blank" class="btn btn-primary">Guide for Feature Graphics</a>
   </div>
 </div>
 
