@@ -16,7 +16,7 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
         checked: false
       },
       {
-        text: "I have tested my game with higher latency",
+        text: 'I have tested my game with higher latency <a href="https://developers.airconsole.com/#!/guides/simulator" target="_blank">(Read Guide)</a>',
         checked: false
       }
     ],
@@ -58,15 +58,15 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
         checked: false
       },
       {
-        text: "I have read and followed the High Score Guide and the launch checklist within (Or: my game does not use high scores)",
+        text: 'I have read and followed the <a href="https://developers.airconsole.com/#!/guides/highscore" target="_blank">High Score Guide</a> and the launch checklist within (Or: my game does not use high scores)',
         checked: false
       },
       {
-        text: "I am using the AirConsole Keyboard for any text input in my game (Or: My game does not use any text input)",
+        text: 'I am using the <a href="https://github.com/AirConsole/airconsole-keyboard" target="_blank">AirConsole Keyboard</a> for any text input in my game (Or: My game does not use any text input)',
         checked: false
       },
       {
-        text: "I have added a custom loading screen (Only games made with Unity)",
+        text: 'I have added a <a href="https://developers.airconsole.com/#!/guides/unity-custom-loading-screen" target="_blank">custom loading screen</a> (Only games made with Unity)',
         checked: false
       }
     ],
@@ -172,7 +172,7 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
         checked: false
       },
       {
-        text: "I have created a feature graphic for my game's promotion within the AirConsole store",
+        text: 'I have created a <a href="https://developers.airconsole.com/#!/guides/feature_graphic" target="_blank">feature graphic</a> for my game\'s promotion within the AirConsole store',
         checked: false
       }
     ]

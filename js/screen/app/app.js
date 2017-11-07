@@ -21,6 +21,7 @@ var Config = {
     for(var depenceny in this.dependencies) {
       dependencies.push(this.dependencies[depenceny]);
     }
+    dependencies.push('ngSanitize');
     dependencies.push('ngRoute');
     return dependencies;
   }
