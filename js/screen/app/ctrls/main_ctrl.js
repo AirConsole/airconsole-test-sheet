@@ -164,10 +164,6 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
         checked: false
       },
       {
-        text: "I have created a page for it on madewith.unity.com (Only games made with Unity)",
-        checked: false
-      },
-      {
         text: "I am promoting my game on social media and will keep posting about it on relevant groups and hashtags",
         checked: false
       },
