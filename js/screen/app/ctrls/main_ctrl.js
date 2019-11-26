@@ -18,6 +18,10 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
       {
         text: 'I have tested my game with higher latency <a href="https://developers.airconsole.com/#!/guides/simulator" target="_blank">(Read Guide)</a>',
         checked: false
+      },
+      {
+        text: "My finished game build is under 80mb in file size (.zip file)",
+        checked: false
       }
     ],
     screen: [
