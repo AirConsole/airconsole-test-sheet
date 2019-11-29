@@ -20,7 +20,11 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
         checked: false
       },
       {
-        text: "My finished game build is under 80mb in file size (.zip file)",
+        text: "My game loads less than 30 MB (gzipped) of resources to start (enter Main Menu).",
+        checked: false
+      },
+      {
+        text: "Additional resources that are loaded later do not exceed 30 MB (gzipped) per request.",
         checked: false
       }
     ],
@@ -100,7 +104,7 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
         checked: false
       },
       {
-        text: "I am not using any html <img> tags on my controller, but set images as <div> backgrounds instead (so that no 'save image as' option appears) ",
+        text: "I am not using any html &lt;img&gt; tags on my controller, but set images as &lt;div&gt; backgrounds instead (so that no 'save image as' option appears) ",
         checked: false
       }
     ],
