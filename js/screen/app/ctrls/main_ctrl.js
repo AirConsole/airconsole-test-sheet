@@ -20,11 +20,11 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
         checked: false
       },
       {
-        text: "My game loads less than 30 MB (gzipped) of resources to start (enter Main Menu).",
+        text: "My game loads less than 50 MB (gzipped) of resources to start (enter Main Menu).",
         checked: false
       },
       {
-        text: "Additional resources that are loaded later do not exceed 30 MB (gzipped) per request.",
+        text: "Additional resources that are loaded later do not exceed 50 MB (gzipped) per request.",
         checked: false
       }
     ],
