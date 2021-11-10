@@ -26,6 +26,9 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
       {
         text: "Additional resources that are loaded later do not exceed 50 MB (gzipped) per request.",
         checked: false
+      }, {
+        text: "I don't try to hide the top AirConsole bar (Using showDefaultUI() from the AirConsole API, DEPRECATED).",
+        checked: false
       }
     ],
     screen: [
@@ -174,9 +177,22 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
       {
         text: "I am promoting my game on social media and will keep posting about it on relevant groups and hashtags",
         checked: false
+      }
+    ],
+    tv: [
+      {
+        text: "The game uses the latest AirConsole plugin version",
+        checked: false
       },
       {
-        text: 'I have created a <a href="https://developers.airconsole.com/#!/guides/feature_graphic" target="_blank">feature graphic</a> for my game\'s promotion within the AirConsole store',
+        text: "The APK/ABB is not in Debug mode",
+        checked: false
+      },
+      {
+        text: "The game uses minimum API level 19 and target API level 30",
+        checked: false
+      }, {
+        text: "I created all Appstore visuals",
         checked: false
       }
     ]

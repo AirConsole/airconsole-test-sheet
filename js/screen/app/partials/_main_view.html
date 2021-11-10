@@ -143,6 +143,30 @@
         </li>
       </ul>
   </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="page-header">Android/Amazon/Huawei TV</h2>
+      <p class="alert alert-info">
+        See our <a href="/#!/guides/unity-androidtv">Android TV guide for Unity games</a>.
+      </p>
+      <ul>
+        <li class="checkbox" ng-repeat="q in questions.tv">
+          <label>
+            <input type="checkbox" ng-checked="q.checked" ng-model="questions.tv[$index].checked" ng-change="updateProgress(q)"> <span ng-bind-html="q.text"></span>
+          </label>
+        </li>
+      </ul>
+    </div>
+
+  <div class="drow">
+    <div class="col-md-12">
+      <p>
+        <br>
+        Once you have completed your launch checklist, please send all files as a ZIP file to developers@n-dream.com.
+      </p>
+    </div>
+  </div>
 </div>
 
 </div>
