@@ -189,7 +189,7 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
         checked: false
       },
       {
-        text: "The game uses minimum API level 19 and target API level 30",
+        text: "The game uses minimum API level 19 and target API level 32",
         checked: false
       }, {
         text: "I created all Appstore visuals",
