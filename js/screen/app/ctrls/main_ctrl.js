@@ -79,10 +79,6 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
       {
         text: 'I have added a <a href="https://developers.airconsole.com/#!/guides/unity-custom-loading-screen" target="_blank">custom loading screen</a> (Only games made with Unity)',
         checked: false
-      },
-      {
-        text: 'My game',
-        checked: false
       }
     ],
     ctrl: [
