@@ -16,7 +16,7 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
         checked: false
       },
       {
-        text: 'I have tested my game with higher latency <a href="https://developers.airconsole.com/#!/guides/simulator" target="_blank">(Read Guide)</a>',
+        text: 'I have tested my game with unstable connection and higher latency <a href="/#!/guides/unstable_connection" target="_blank">(Read Guide)</a>',
         checked: false
       },
       {
@@ -27,7 +27,7 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
         text: "Additional resources that are loaded later do not exceed 50 MB (gzipped) per request.",
         checked: false
       }, {
-        text: "I don't try to hide the top AirConsole bar (Using showDefaultUI() from the AirConsole API, DEPRECATED).",
+        text: "I don't try to hide the top AirConsole bar (Using the DEPRECATED showDefaultUI() from the AirConsole API).",
         checked: false
       }
     ],
@@ -78,6 +78,10 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
       },
       {
         text: 'I have added a <a href="https://developers.airconsole.com/#!/guides/unity-custom-loading-screen" target="_blank">custom loading screen</a> (Only games made with Unity)',
+        checked: false
+      },
+      {
+        text: 'My game',
         checked: false
       }
     ],
