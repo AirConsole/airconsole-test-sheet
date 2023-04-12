@@ -113,7 +113,7 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
     ],
     ctx_screen: [
       {
-        text: "I have tested my game in the Chrome browser and it works",
+        text: 'I have tested my game in the latest Chrome and Chrome 66 browser and it works. I can use <a target="_blank" href="https://www.browserstack.com/">Browserstack</a> to ensure that everything works properly.',
         checked: false
       },
       {
