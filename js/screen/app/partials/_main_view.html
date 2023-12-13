@@ -7,7 +7,9 @@
         <div class="row">
           <div class="col-md-10">
             <div class="progress">
-              <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="{ width: getProgress() }" aria-valuemin="0" aria-valuemax="100" ng-style="{ width: getProgress() }"></div>
+              <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="{ width: getProgress() }" aria-valuemin="0" aria-valuemax="100" ng-style="{ width: getProgress() }">
+                {{ getProgress() }}
+              </div>
             </div>
           </div>
           <div class="col-md-2 text-right">
@@ -22,7 +24,7 @@
 </div>
 
 <div class="container">
-  <div class="drow">
+  <div class="row">
     <div class="col-md-12">
       <h1 class="page-header"><img src="http://www.airconsole.com/file/logo-40.png"> AirConsole Checklist</h1>
       <p>
@@ -81,6 +83,31 @@
     </div>
   </div>
 
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="page-header">Saving player state</h2>
+      <ul>
+        <li class="checkbox" ng-repeat="q in questions.localisation">
+          <label>
+            <input type="checkbox" ng-checked="q.checked" ng-model="questions.localisation[$index].checked" ng-change="updateProgress(q)"> <span ng-bind-html="q.text"></span>
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="page-header">Localisation</h2>
+      <ul>
+        <li class="checkbox" ng-repeat="q in questions.player_state">
+          <label>
+            <input type="checkbox" ng-checked="q.checked" ng-model="questions.player_state[$index].checked" ng-change="updateProgress(q)"> <span ng-bind-html="q.text"></span>
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
 
   <div class="row">
     <div class="col-md-12">
@@ -99,8 +126,9 @@
   <div class="row">
     <div class="col-md-12">
       <h2 class="page-header">Controller browsers</h2>
-      Your game works in the AirConsole App as well as in all modern mobile browsers.
-
+      <p>
+        Your game works in the AirConsole App as well as in all modern mobile browsers.
+      </p>
       <p class="alert alert-info">
         If you are having trouble getting access to a specific operating system or browser, we recommend asking the AirConsole developer community on our <a href="discordapp.com/invite/5BzND3v">Discord server</a> for help.
       </p>
@@ -114,10 +142,12 @@
     </div>
   </div>
 
- <div class="row">
+  <div class="row">
     <div class="col-md-12">
-      <h2 class="page-header">Monetization</h2>
-      Your game is showing ad breaks and handles them correctly. Remember that you can call showAd as often as possible and AirConsole will limit the actual ad frequency.
+      <h2 class="page-header">Hero Subscription Promotion</h2>
+      <p>
+        Your game is showing ad breaks and handles them correctly. Remember that you can call showAd as often as possible and AirConsole will limit the actual ad frequency.
+      </p>
       <p class="alert alert-info">
         See our <a href="https://developers.airconsole.com/#!/guides/ads_dev">monetization guide</a> for more information.
       </p>
@@ -125,6 +155,19 @@
         <li class="checkbox" ng-repeat="q in questions.ads">
           <label>
             <input type="checkbox" ng-checked="q.checked" ng-model="questions.ads[$index].checked" ng-change="updateProgress(q)"> <span ng-bind-html="q.text"></span>
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="page-header">Quality Control</h2>
+      <ul>
+        <li class="checkbox" ng-repeat="q in questions.quality">
+          <label>
+            <input type="checkbox" ng-checked="q.checked" ng-model="questions.quality[$index].checked" ng-change="updateProgress(q)"> <span ng-bind-html="q.text"></span>
           </label>
         </li>
       </ul>
@@ -142,6 +185,7 @@
           </label>
         </li>
       </ul>
+    </div>
   </div>
 
   <div class="row">
@@ -158,8 +202,9 @@
         </li>
       </ul>
     </div>
+  </div>
 
-  <div class="drow">
+  <div class="row">
     <div class="col-md-12">
       <p>
         <br>
@@ -167,6 +212,5 @@
       </p>
     </div>
   </div>
-</div>
 
 </div>
