@@ -8,11 +8,11 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
   $scope.questions_default = {
     multi_screen: [
       {
-        text: 'I have tested that with 2 or more screens connected in a game session,<br />there is always only 1 primary controller.',
+        text: 'I have tested that with 2 or more screens connected in a game session,<br />there is always only 1 primary screen.',
         checked: false
       },
       {
-        text: 'I have tested that with 2 or more screens connected in a game session,<br />there is always only 1 primary screen.',
+        text: 'I have tested that with 2 or more screens connected in a game session,<br />there is always only 1 primary controller.',
         checked: false
       },
       {
@@ -86,8 +86,13 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
       {
         text: "Additional resources that are loaded later do not exceed 50 MB (gzipped) per request.",
         checked: false
-      }, {
+      }, 
+      {
         text: "I don't try to hide the top AirConsole bar (Using the DEPRECATED showDefaultUI() from the AirConsole API).",
+        checked: false
+      },
+      {
+        text: "If I use the Highscore API, I've tested that my game correctly handles all the cases from the <a href='/#!/guides/highscore#checklist-before-launch' target='_blank'>Checklist before launch</a> list.",
         checked: false
       }
     ],
