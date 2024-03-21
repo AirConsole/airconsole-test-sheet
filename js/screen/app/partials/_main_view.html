@@ -163,6 +163,19 @@
 
   <div class="row">
     <div class="col-md-12">
+      <h2 class="page-header">Multi-screen Multiplayer Games <a href="/#!/guides/multiplayer#best_practices" target="_blank">(Read Guide)</a></h2>
+      <ul>
+        <li class="checkbox" ng-repeat="q in questions.multi_screen">
+          <label>
+            <input type="checkbox" ng-checked="q.checked" ng-model="questions.multi_screen[$index].checked" ng-change="updateProgress(q)"> <span ng-bind-html="q.text"></span>
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
       <h2 class="page-header">Quality Control</h2>
       <ul>
         <li class="checkbox" ng-repeat="q in questions.quality">
