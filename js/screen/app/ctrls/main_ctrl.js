@@ -317,7 +317,7 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
   };
 
   $scope.load = function() {
-    return JSON.parse(localStorage.getItem(storage_key)) || $scope.questions_default;
+    return {...$scope.questions_default, ...JSON.parse(localStorage.getItem(storage_key))};
   };
 
   $scope.updateProgress = function(q) {
