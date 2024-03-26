@@ -8,27 +8,27 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
   $scope.questions_default = {
     multi_screen: [
       {
-        text: 'I have tested that with 2 or more screens connected in a game session,<br />there is always only 1 primary screen.',
+        text: 'With 2 or more screens connected in a game session,<br />there is always only 1 primary screen.',
         checked: false
       },
       {
-        text: 'I have tested that with 2 or more screens connected in a game session,<br />there is always only 1 primary controller.',
+        text: 'With 2 or more screens connected in a game session,<br />there is always only 1 primary controller.',
         checked: false
       },
       {
-        text: 'I have tested that with 2 or more screens connected in a game session,<br />only the primary screen can control the game.',
+        text: 'With 2 or more screens connected in a game session,<br />only the primary screen can control the game.',
         checked: false
       },
       {
-        text: 'I have tested that with 2 or more screens connected in a game session,<br />only the primary controller can control the game through the primary screen.',
+        text: 'With 2 or more screens connected in a game session,<br />only the primary controller can control the game through the primary screen.',
         checked: false
       },
       {
-        text: 'I have tested that with 2 or more screens connected in a game session,<br />when the primary screen leaves the game session,<br />only one of the secondary screens becomes the primary screen.',
+        text: 'With 2 or more screens connected in a game session,<br />when the primary screen leaves the game session,<br />only one of the secondary screens becomes the primary screen.',
         checked: false
       },
       {
-        text: 'I have tested that with 2 or more screens connected in a game session,<br />when the primary controller leave the game session,<br />the new master controller on the primary screen becomes the primary controller.',
+        text: 'With 2 or more screens connected in a game session,<br />when the primary controller leave the game session,<br />the new master controller on the primary screen becomes the primary controller.',
         checked: false
       }
     ],
