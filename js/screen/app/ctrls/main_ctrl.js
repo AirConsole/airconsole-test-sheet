@@ -8,7 +8,7 @@ TestApp.controllers.controller('MainCtrl', ['$scope', '$location', '$timeout', f
   $scope.questions_default = {
     multi_screen: [
       {
-        text: 'With 2 or more screens connected in a game session,<br />there is always only 1 primary screen.',
+        text: 'With 2 or more screens connected in a game session,<br />there is always only 1 primary screen. (<a href="/#!/guides/multi-screen#key_concepts" target="_blank">Key Concepts explained</a>)',
         checked: false
       },
       {
